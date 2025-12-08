@@ -1,12 +1,12 @@
 # X-Ray Image Classifier Using ResNet-18 (PyTorch)
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.2-red)
-![ResNet18](https://img.shields.io/badge/Model-ResNet18-critical)
-![Computer Vision](https://img.shields.io/badge/Application-Medical%20Imaging-9cf)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red)
+![Domain](https://img.shields.io/badge/Domain-Medical--AI-blue)
+![Model](https://img.shields.io/badge/Model-ResNet18-purple)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-> Fine-tuning ResNet-18 for medical X-ray image classification with augmentation pipeline, AdamW optimization, cosine LR scheduling, and GPU-accelerated training.
+> A medical imaging classifier built by fine-tuning a ResNet-18 backbone on X-ray data. Includes GPU-optimized training, augmentation pipelines, transfer learning, and evaluation scripts useful for healthcare AI prototyping.
 
 ---
 
