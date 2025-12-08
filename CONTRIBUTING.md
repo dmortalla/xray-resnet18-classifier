@@ -1,19 +1,73 @@
-# Contributing
+# Contributing to X-Ray ResNet-18 Classifier
 
-Thanks for your interest in contributing! This repository is primarily a
-personal learning and portfolio project, but improvements and suggestions
-are always welcome.
+Thank you for contributing to this medical imaging classification project using a fine-tuned ResNet-18 built with PyTorch.
 
-## How to Contribute
+---
 
-1. **Open an issue**  
-   - If you find a bug or want to suggest an enhancement, please open an issue
-     describing:
-     - What you tried
-     - What you expected to happen
-     - What actually happened
+## 1. Fork the Repository
 
-2. **Fork the repo & create a branch**
+Use the **Fork** button on GitHub to create your own working copy.
 
-   ```bash
-   git checkout -b feature/your-feature-name
+---
+
+## 2. Clone Your Fork & Create a Branch
+
+```bash
+git clone https://github.com/<your-username>/xray-resnet-classifier.git
+cd xray-resnet-classifier
+git checkout -b feature/your-feature-name
+```
+
+---
+
+## 3. Make Your Changes
+
+- Maintain clarity and consistency—medical AI requires careful engineering.
+- Augmentation changes should preserve diagnostic signal.
+- Avoid altering normalization pipelines unless required.
+- Test on a small subset before proposing large modifications.
+
+---
+
+## 4. Run Basic Checks
+
+### Syntax Validation
+
+```bash
+python -m compileall .
+```
+
+### Quick Training Smoke Test
+
+```bash
+python train_resnet18_xray.py --epochs 1 --tiny
+```
+
+### Optional: Run Tests (if applicable)
+
+```bash
+pytest
+```
+
+---
+
+## 5. Open a Pull Request
+
+- Clearly describe the change, motivation, and expected impact.
+- Include metrics if training or model improvements are involved.
+- For image-processing PRs, note any medical-imaging conventions considered.
+
+---
+
+## Code Style Guidelines
+
+- Use descriptive names like `features`, `logits`, `images_norm`.
+- Add docstrings summarizing function responsibilities.
+- Ensure dataloaders remain performant on GPU.
+- Document shape transformations clearly.
+
+---
+
+## Thank You
+
+Your contributions help advance reliable, transparent medical imaging AI.
