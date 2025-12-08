@@ -33,3 +33,40 @@ python train_resnet18_xray.py
 
 train_resnet18_xray.py
 requirements.txt
+```
+
+---
+
+## 🧱 Architecture Overview
+
+At a high level, the training system looks like this:
+
+```text
+Input images (H x W x 3)
+        |
+    torchvision.transforms
+    - Resize to 224x224
+    - Data augmentation
+    - Normalization
+        |
+        v
+  Pretrained ResNet-18 backbone
+        |
+        +--> Convolution + Residual Blocks
+        |
+        v
+ Global Average Pooling
+        |
+        v
+  Fully-connected classification head
+  (replaced with num_classes = 2)
+        |
+        v
+  Softmax (via CrossEntropyLoss)
+```
+
+---
+
+## 📜 License
+This project is licensed under the MIT License — see the LICENSE file for details.
+
