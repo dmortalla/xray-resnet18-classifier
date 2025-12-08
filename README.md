@@ -31,3 +31,5 @@ Demonstrates practical applied computer vision engineering.
 pip install -r requirements.txt
 python train_resnet18_xray.py
 
+train_resnet18_xray.py
+requirements.txt
