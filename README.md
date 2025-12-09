@@ -16,7 +16,7 @@ Run a single-image inference demo:
 
 ```bash
 pip install -r requirements.txt
-python run_demo.py
+python demo_predict.py
 ```
 
 This demonstrates preprocessing, feature extraction, and final classification.
@@ -45,7 +45,7 @@ Includes:
 
 ```text
 train_resnet18_xray.py   # Full transfer-learning training script
-run_demo.py              # Example inference on a sample X-ray
+demo_predict.py              # Example inference on a sample X-ray
 requirements.txt         # Dependencies
 ```
 
