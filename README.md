@@ -10,32 +10,48 @@
 
 ---
 
-## 🚀 Overview
-
-This project fine-tunes **ResNet-18** for X-ray image classification:
-
-- Custom classification head  
-- Data augmentation: flips, transforms, normalization  
-- AdamW optimizer  
-- Cosine annealing LR scheduler  
-- GPU-accelerated training loop  
-- Robust evaluation pipeline  
-
-Demonstrates practical applied computer vision engineering.
-
----
-
-## ▶️ Quickstart (For Reviewers)
+## 🚀 Quickstart Demo
 
 ```bash
 pip install -r requirements.txt
-python train_resnet18_xray.py
+python run_demo.py
+```
 
-train_resnet18_xray.py
-requirements.txt
+Runs preprocessing + a forward pass on a sample X-ray.
+
+---
+
+## 📁 Files
+
+```text
+train_resnet18_xray.py   # Full training script using transfer learning
+run_demo.py              # Single-image inference demo
+requirements.txt         # Dependencies
 ```
 
 ---
+
+## 🧠 Model Overview
+
+- Pretrained ResNet-18 convolutional backbone  
+- Frozen → partially unfrozen fine-tuning schedule  
+- Data augmentations for robustness  
+- Linear classifier head for target labels  
+- Cross-entropy loss + accuracy evaluation  
+
+Well-suited for demonstrating applied deep learning on real-world imaging tasks.
+
+---
+
+## 📂 Project Structure
+
+```text
+.
+├── train_resnet18_xray.py
+├── run_demo.py
+├── requirements.txt
+└── CONTRIBUTING.md
+```
 
 ## 🧱 Architecture Overview
 
@@ -67,6 +83,10 @@ Input images (H x W x 3)
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License — see the LICENSE file for details.
+## 🤝 Contributing
+See CONTRIBUTING.md for branch workflow, issue guidelines, and PR instructions.
 
+---
+
+## 📄 License
+MIT License. See `LICENSE` for details.
