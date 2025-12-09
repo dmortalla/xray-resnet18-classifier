@@ -25,7 +25,7 @@ Demonstrates practical applied computer vision engineering.
 
 ---
 
-## ▶️ Quickstart
+## ▶️ Quickstart (For Reviewers)
 
 ```bash
 pip install -r requirements.txt
