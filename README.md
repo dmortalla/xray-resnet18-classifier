@@ -10,36 +10,58 @@
 
 ---
 
-## 🚀 Quickstart Demo
+## 🚀 Quickstart Demo (For Reviewers)
+
+Run a single-image inference demo:
 
 ```bash
 pip install -r requirements.txt
 python run_demo.py
 ```
 
-Runs preprocessing + a forward pass on a sample X-ray.
+This demonstrates preprocessing, feature extraction, and final classification.
+
+---
+
+## 📦 Full Training Run
+
+Train the full ResNet-18 classifier:
+
+```bash
+python train_resnet18_xray.py
+```
+
+Includes:
+
+- Frozen → unfrozen training phases  
+- Augmentations (resize, normalize, flips)  
+- ImageFolder dataset loading  
+- Accuracy reporting  
+- Transfer learning best practices  
 
 ---
 
 ## 📁 Files
 
 ```text
-train_resnet18_xray.py   # Full training script using transfer learning
-run_demo.py              # Single-image inference demo
+train_resnet18_xray.py   # Full transfer-learning training script
+run_demo.py              # Example inference on a sample X-ray
 requirements.txt         # Dependencies
 ```
 
 ---
 
-## 🧠 Model Overview
+## 🏗 Overview
 
-- Pretrained ResNet-18 convolutional backbone  
-- Frozen → partially unfrozen fine-tuning schedule  
+The pipeline uses:
+
+- Pretrained ResNet-18 backbone  
+- Custom classification head  
+- Cross-entropy loss  
+- Optional mixed precision  
 - Data augmentations for robustness  
-- Linear classifier head for target labels  
-- Cross-entropy loss + accuracy evaluation  
 
-Well-suited for demonstrating applied deep learning on real-world imaging tasks.
+This repo demonstrates applied computer vision engineering for medical imaging tasks.
 
 ---
 
@@ -50,8 +72,11 @@ Well-suited for demonstrating applied deep learning on real-world imaging tasks.
 ├── train_resnet18_xray.py
 ├── run_demo.py
 ├── requirements.txt
-└── CONTRIBUTING.md
+├── CONTRIBUTING.md
+└── SECURITY.md
 ```
+
+---
 
 ## 🧱 Architecture Overview
 
@@ -84,7 +109,7 @@ Input images (H x W x 3)
 ---
 
 ## 🤝 Contributing
-See CONTRIBUTING.md for branch workflow, issue guidelines, and PR instructions.
+See `CONTRIBUTING.md` for contribution guidelines.
 
 ---
 
